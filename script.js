@@ -13,6 +13,8 @@ const completedCount = document.getElementById("completedCount");
 addTaskBtn.addEventListener("click", function () {
   const taskText = taskInput.value;
 
+  const currentTime = new Date().toLocaleDateString();
+
   if (taskText.trim() === "") {
     alert("Please enter a task");
     return;
@@ -27,7 +29,7 @@ addTaskBtn.addEventListener("click", function () {
 
     <div>
       <h5 class="task-title"> ${taskText}</h5>
-      <small class="task-time"> Added: Just Now</small>
+      <small class="task-time"> Added: ${currentTime} </small>
     </div>
 
     <div class="task-buttons">
@@ -62,7 +64,9 @@ addTaskBtn.addEventListener("click", function () {
     taskElement.querySelector(".task-title").style.textDecoration =
       "line-through";
 
-    taskElement.querySelector(".task-time").textContent = "Completed: Just Now";
+      const completedTime = new Date().toLocaleDateString();
+
+      taskElement.querySelector(".task-time").textContent = `Completed: ${completedTime}`;
 
     updateTaskCount();
   });
