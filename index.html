@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ToDo WebApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <!-- heading  -->
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">To-Do Web App</h1>
+        <p class="text-secondary">Manage your daily task easily</p>
+      </div>
+
+      <!-- Task session -->
+      <div class="card p-4 shadow-lg border-0 rounded-4">
+        <div class="row g-3">
+          <!-- Input -->
+          <div class="col-lg-10 col-md-9 col-12">
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Enter your task..."
+              id="taskInput"
+            />
+          </div>
+
+          <!-- buttons -->
+          <div class="col-lg-2 col-md-3 col-12 d-grid">
+            <button class="btn btn-primary btn-lg" id="addTaskBtn">
+              + Add Task
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tasks Section -->
+
+      <div class="row mt-5 g-4">
+        <!-- For Pending task -->
+        <div class="col-lg-6 col-12">
+          <div class="card p-4 shadow border-0 rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="mb-0">Pending Tasks</h3>
+              <span class="badge bg-warning text-dark" id="pendingCount">
+                0
+              </span>
+            </div>
+
+            <!-- This is pending task container -->
+            <div id="pendingTasks">
+              <!-- Pending Task will appear here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Completed Tasks -->
+
+        <div class="col-lg-6 col-12">
+          <div class="card p-4 shadow border-0 rounded-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="mb-0">Completed Tasks</h3>
+              <span class="badge bg-success" id="completedCount"> 0 </span>
+            </div>
+
+            <!-- This is Completed task container -->
+            <div id="completedTasks">
+              <!-- Completed Task will appear here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
